@@ -1,8 +1,9 @@
 package TP1;
 public class Exo4 {
-    private char[] brinPrinc = new char[] {'C','C','C','C','C','C'};
+    private char[] brinPrinc = new char[6];
     private char[] brinDup = new char[brinPrinc.length];
     private char[] brinAlea = new char[brinPrinc.length];
+    private char[] brinComp = new char[brinAlea.length];
 
 
     Exo4(){
@@ -26,13 +27,13 @@ public class Exo4 {
         System.out.print("Brin pricipal généré aléatoirement : ");
         
         afficher();
+        System.out.println("");
     }
 
     public void afficher(){
         for (int i = 0; i < brinPrinc.length; i++){
             System.out.print(brinPrinc[i]);
         }
-        System.out.println("");
     }
 
     public void dupli(){
@@ -115,6 +116,7 @@ public class Exo4 {
         }
         System.out.print("Brin pricipal mutation aléatoire   : ");
         afficher();
+        System.out.println("");
     }
 
     public void recombinaison(){ // début aléa + fin principal
@@ -129,6 +131,23 @@ public class Exo4 {
         System.out.println(String.format("   Position recombinaison : %d", randPos));
     }
 
+    public void complement(){
+        System.out.print("Brin complément du brin aléatoire  : ");
+        for (int i = 0; i < brinAlea.length; i++){
+            brinComp[i] = brinAlea[brinAlea.length-1 - i ];
+            System.out.print(brinComp[i]);
+        }
+        System.out.println("");
+    }
+
+    public void cloneMultiple(){
+        System.out.print("Brin principal cloné               : ");
+        int rand = (int)(Math.random() * 10) + 1;
+        for (int i=0; i<rand; i++ ){
+            afficher();
+        }
+        System.out.println(String.format("   Nombre de clone : %d", rand));
+    }
 
 
     public static void main(String[] args){
@@ -137,6 +156,8 @@ public class Exo4 {
         test.alea();
         test.mutation();
         test.recombinaison();
+        test.complement();
+        test.cloneMultiple();
     }
 }
 
