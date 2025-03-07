@@ -38,7 +38,6 @@ public class Exo5 {
         return res;
     }
 
-
     public static Exo5 multiplication(Exo5 matrice1, Exo5 matrice2){ // fonctionne que pour des matrices carrées d'entier.
         System.out.println("\nMultiplication: ");
         Exo5 res = new Exo5(matrice1.dim);
