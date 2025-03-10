@@ -1,5 +1,7 @@
 package TP2.Exo3;
 
+import java.util.Scanner;
+
 public class Livre {
     private String titre;
     private String nomAuteur;
@@ -7,6 +9,40 @@ public class Livre {
     private String categorie;
     private String isbn;
     private String code;
+
+    Livre(){
+        Scanner userInput = new Scanner(System.in); 
+        
+        System.out.print("Entrer le titre : ");
+        String input = userInput.nextLine();
+        this.setTitre(input);
+
+        System.out.print("Entrer le Nom de l'auteur : ");
+        input = userInput.nextLine();
+        this.setNomAuteur(input);
+
+        System.out.print("Entrer le Prénom de l'auteur : ");
+        input = userInput.nextLine();
+        this.setPrenomAuteur(input);
+
+        System.out.print("Entrer la Catégorie : ");
+        input = userInput.nextLine();
+        this.setCategorie(input);
+
+        System.out.print("Entrer le numéro ISBN : ");
+        input = userInput.nextLine();
+        this.setIsbn(input);
+
+        userInput.close();
+    }
+
+    Livre(String titre,String nomAuteur,String prenomAuteur,String categorie,String isbn){
+        this.titre = titre;
+        this.nomAuteur = nomAuteur;
+        this.prenomAuteur = prenomAuteur;
+        this.categorie = categorie;
+        this.isbn = isbn;
+    }
 
     public String afficherUnLivre() {
         String str = String.format(
