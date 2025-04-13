@@ -38,7 +38,7 @@ public class LignePolygonale {
         return str;
     }
 
-    public void translater(int dx, int dy) {
+    public void translater(double dx, double dy) {
         for (int i=0; i<sommets.length; i++){
             sommets[i].translation(dx, dy);
         }

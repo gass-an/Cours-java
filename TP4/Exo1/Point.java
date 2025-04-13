@@ -27,6 +27,12 @@ public class Point {
         System.out.println(str);
         return str;
     }
+    public double getX() {
+        return x;
+    }
+    public double getY() {
+        return y;
+    }
 
     public static void main(String[] args){
         Point test = new Point(2, -2);
