@@ -1,15 +1,18 @@
 package TP5;
 
+import java.util.HashMap;
+
 public abstract class Personnage{
     protected String nom;
     protected int pointsVie, connaissances, x, y, v, sous;
+    protected HashMap<String, Anneau> anneaux = new HashMap<String, Anneau>();
     
-    public Personnage(String n, int x, int y, int v){
+    public Personnage(String n, int x, int y){
         this.nom = n;
         this.x = x; this.y = y;
         this.pointsVie = 100;
         this.connaissances = 0;
-        this.v = v;
+        this.v = 0;
         this.sous = 0;
     }
     
@@ -37,4 +40,8 @@ public abstract class Personnage{
     }
 
     public abstract String parler();
+
+    public void newAnneau(Anneau a){
+        anneaux.put(a.getNom(), a);
+    }
 }

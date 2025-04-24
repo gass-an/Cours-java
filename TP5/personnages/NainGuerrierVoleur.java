@@ -5,8 +5,8 @@ import TP5.interfaces.Voleur;
 
 public class NainGuerrierVoleur extends NainGuerrier implements Voleur{
     private int dexterite;
-    public NainGuerrierVoleur(String n, int x, int y, int v, int force, int dexterite){
-        super(n, dexterite, y, v, force);
+    public NainGuerrierVoleur(String n, int x, int y, int force, int dexterite){
+        super(n, dexterite, y, force);
         this.dexterite = dexterite;
     }
 

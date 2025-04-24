@@ -3,8 +3,8 @@ package TP5.personnages;
 import TP5.Personnage;
 
 public class Humain extends Personnage{
-    public Humain(String n, int x, int y, int v){
-        super(n, x, y, v);
+    public Humain(String n, int x, int y){
+        super(n, x, y);
         this.v = 5;
     }
 

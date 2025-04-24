@@ -6,8 +6,8 @@ import TP5.interfaces.Guerrier;
 public class NainGuerrier extends Nain implements Guerrier{
     private int force;
     
-    public NainGuerrier(String n, int x, int y, int v, int force){
-        super(n, x, y, v);
+    public NainGuerrier(String n, int x, int y, int force){
+        super(n, x, y);
         this.force = force;
     }
 
